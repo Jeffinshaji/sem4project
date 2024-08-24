@@ -13,9 +13,9 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href={% static 'images/favicon.png' %}>
+  <link rel="shortcut icon" href={% static 'images/icon1.png' %}>
 
-  <title> Finexo </title>
+  <title> AcciSense </title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href={% static 'css/bootstrap.css' %} />
@@ -66,16 +66,16 @@
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html"> About</a>
+                <a class="nav-link" href= {% url 'about' %}> About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="service.html">Services</a>
+                <a class="nav-link" href={% url 'service' %}>Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="why.html">Why Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="team.html">Team</a>
+                <a class="nav-link" href={% url 'team' %}>Team</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
@@ -116,7 +116,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="img-box">
-                    <img src={% static 'images/slider-img.png' %} alt="">
+                    <img src={% static 'images/Acc.png' %} alt="">
                   </div>
                 </div>
               </div>
@@ -266,7 +266,7 @@
         </div>
         <div class="btn-box">
           <a href="">
-            View All
+            Find Route
           </a>
         </div>
       </div>
@@ -410,14 +410,14 @@
           <div class="col-lg-3 col-sm-6">
             <div class="box ">
               <div class="img-box">
-                <img src={% static 'images/team-1.png' %} class="img1" alt="">
+                <img src={% static 'images/Jaise.jpg' %} class="img1" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  Joseph Brown
+                  Jaise George
                 </h5>
                 <p>
-                  Marketing Head
+                  Backend Developer
                 </p>
               </div>
               <div class="social_box">
@@ -446,10 +446,10 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Nancy White
+                  Jeffin Shaji
                 </h5>
                 <p>
-                  Marketing Head
+                  Content Creator
                 </p>
               </div>
               <div class="social_box">
@@ -474,14 +474,14 @@
           <div class="col-lg-3 col-sm-6">
             <div class="box ">
               <div class="img-box">
-                <img src={% static 'images/team-3.jpg' %} class="img1" alt="">
+                <img src={% static 'images/Adharsh.jpg' %} class="img1" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  Earl Martinez
+                  Adharsh jaison
                 </h5>
                 <p>
-                  Marketing Head
+                  Frontend Developer
                 </p>
               </div>
               <div class="social_box">
@@ -503,12 +503,12 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <!-- <div class="col-lg-3 col-sm-6">
             <div class="box ">
               <div class="img-box">
                 <img src={% static 'images/team-4.jpg' %} class="img1" alt="">
-              </div>
-              <div class="detail-box">
+              </div> -->
+              <!-- <div class="detail-box">
                 <h5>
                   Josephine Allard
                 </h5>
@@ -533,7 +533,7 @@
                   <i class="fa fa-youtube-play" aria-hidden="true"></i>
                 </a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
