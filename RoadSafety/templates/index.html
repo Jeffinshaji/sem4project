@@ -38,6 +38,8 @@
 
 <body>
 
+
+
   <div class="hero_area">
 
     <div class="hero_bg_box">
@@ -71,11 +73,7 @@
               <li class="nav-item">
                 <a class="nav-link" href={% url 'service' %}>Services</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="why.html">Why Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href={% url 'team' %}>Team</a>
+              
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
@@ -108,7 +106,7 @@
                       
 "Accidental Analysis and Prediction" is a cutting-edge platform that leverages advanced analytics and machine learning to identify patterns and predict unforeseen outcomes. Whether you're analyzing past incidents to prevent future ones or exploring potential scenarios, our tools provide insights that help you make informed decisions and mitigate risks. Ideal for industries focused on safety, security, and predictive maintenance, our website is your go-to resource for turning data into actionable predictions.                 </p>
                     <div class="btn-box">
-                      <a href="" class="btn1">
+                      <a href=" {% url 'service' %}" class="btn1">
                         Get Started
                       </a>
                     </div>
@@ -228,7 +226,7 @@
               <div class="img-box">
                 <img src="images/s2.png" alt="">
               </div>
-              <div class="detail-box">
+              <!-- <div class="detail-box">
                 <h5>
                   Security Storage
                 </h5>
@@ -240,7 +238,7 @@
                 <a href="">
                   Read More
                 </a>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="col-md-4 ">
@@ -264,10 +262,51 @@
             </div>
           </div>
         </div>
-        <div class="btn-box">
+        <!-- <div class="btn-box">
           <a href="">
             Find Route
-          </a>
+          </a> -->
+
+          
+  <!-- demo -->
+   <link rel="stylesheet" type="text/css" href={% static 'css/stl.css' %} />
+   <div class="wrapper">
+     <div class="button" onclick="document.body.classList.add('active')">
+         <span class="button-text">Route</span>
+         <div class="button-backgrounds">
+             <div class="button-circle button-circle1"></div>
+             <div class="button-circle button-circle2"></div>
+             <div class="button-circle button-circle3"></div>
+             <div class="button-circle button-circle4"></div>
+         </div>
+     </div>
+ </div>
+ 
+ <div class="wrapper">
+     <div class="popup">
+         <div class="popup-inside">
+             <div class="backgrounds">
+                 <div class="background"></div>
+                 <div class="background background2"></div>
+                 <div class="background background3"></div>
+                 <div class="background background4"></div>
+                 <div class="background background5"></div>
+                 <div class="background background6"></div>
+             </div>
+         </div>
+         <div class="content">
+             <div class="content-wrapper">
+              <!--popup content-->
+              
+              <!--end popup -->
+                 <h1>Find your Route</h1>
+                 <p>Do you like it?</p>
+                 <p class="try-again" onclick="document.body.classList.remove('active')"><a href="">Find Route</a></p>
+             </div>
+         </div>
+     </div>
+ </div>
+    <!-- end demo -->
         </div>
       </div>
     </div>
@@ -319,227 +358,8 @@
 
   <!-- end about section -->
 
-  <!-- why section -->
-
-  <section class="why_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Why Choose <span>Us</span>
-        </h2>
-      </div>
-      <div class="why_container">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/w1.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Expert Management
-            </h5>
-            <p>
-              Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
-              Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/w2.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Secure Investment
-            </h5>
-            <p>
-              Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
-              Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/w3.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Instant Trading
-            </h5>
-            <p>
-              Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
-              Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src={% static 'images/w4.png' %} alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Happy Customers
-            </h5>
-            <p>
-              Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
-              Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="">
-          Read More
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- end why section -->
-
-  <!-- team section -->
-  <section class="team_section layout_padding">
-    <div class="container-fluid">
-      <div class="heading_container heading_center">
-        <h2 class="">
-          Our <span> Team</span>
-        </h2>
-      </div>
-
-      <div class="team_container">
-        <div class="row">
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src={% static 'images/Jaise.jpg' %} class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Jaise George
-                </h5>
-                <p>
-                  Backend Developer
-                </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src={% static 'images/team-2.jpg' %} class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Jeffin Shaji
-                </h5>
-                <p>
-                  Content Creator
-                </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src={% static 'images/Adharsh.jpg' %} class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Adharsh jaison
-                </h5>
-                <p>
-                  Frontend Developer
-                </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src={% static 'images/team-4.jpg' %} class="img1" alt="">
-              </div> -->
-              <!-- <div class="detail-box">
-                <h5>
-                  Josephine Allard
-                </h5>
-                <p>
-                  Marketing Head
-                </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div> -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end team section -->
+  
+  
 
 
   <!-- client section -->
@@ -720,13 +540,7 @@
               <a class="" href="service.html">
                 Services
               </a>
-              <a class="" href="why.html">
-                Why Us
-              </a>
-              <a class="" href="team.html">
-                Team
-              </a>
-            </div>
+                          </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 info_col ">
