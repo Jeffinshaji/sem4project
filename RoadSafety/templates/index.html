@@ -65,24 +65,9 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  ">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href={% url 'home' %}>Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href= {% url 'about' %}> About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href={% url 'service' %}>Services</a>
-              </li>
-
-              
-              </li>
-
-              <!-- <li class="nav-item"> 
-                <a class="nav-link" href="why.html">Why Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href={% url 'team' %}>Team</a>
-              </li>-->
+            </li>
 
               <li class="nav-item">
                 <a class="nav-link" href={% url 'Login' %} > <i class="fa fa-user" aria-hidden="true"></i> Login</a>
@@ -115,7 +100,7 @@
                       
 "Accidental Analysis and Prediction" is a cutting-edge platform that leverages advanced analytics and machine learning to identify patterns and predict unforeseen outcomes. Whether you're analyzing past incidents to prevent future ones or exploring potential scenarios, our tools provide insights that help you make informed decisions and mitigate risks. Ideal for industries focused on safety, security, and predictive maintenance, our website is your go-to resource for turning data into actionable predictions.                 </p>
                     <div class="btn-box">
-                      <a href=" {% url 'service' %}" class="btn1">
+                      <a href={% url 'Login' %} class="btn1">
                         Get Started
                       </a>
                     </div>
@@ -198,7 +183,7 @@
 
   <!-- service section -->
 
-  <section class="service_section layout_padding">
+  {% comment %} <section class="service_section layout_padding">
     <div class="service_container">
       <div class="container ">
         <div class="heading_container heading_center">
@@ -274,11 +259,11 @@
         <!-- <div class="btn-box">
           <a href="">
             Find Route
-          </a> -->
+          </a> --> {% endcomment %}
 
           
   <!-- demo -->
-   <link rel="stylesheet" type="text/css" href={% static 'css/stl.css' %} />
+   {% comment %} <link rel="stylesheet" type="text/css" href={% static 'css/stl.css' %} />
    <div class="wrapper">
      <div class="button" onclick="document.body.classList.add('active')">
          <span class="button-text">Route</span>
@@ -319,14 +304,14 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> {% endcomment %}
 
   <!-- end service section -->
 
 
   <!-- about section -->
 
-  <section class="about_section layout_padding">
+  {% comment %} <section class="about_section layout_padding">
     <div class="container  ">
       <div class="heading_container heading_center">
         <h2>
@@ -567,7 +552,7 @@
     </div>
   </section>
 
-  <!-- end info section -->
+  <!-- end info section --> {% endcomment %}
 
   <!-- footer section -->
   <section class="footer_section">

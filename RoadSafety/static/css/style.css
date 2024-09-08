@@ -50,7 +50,7 @@ body {
 }
 
 .heading_container h2 span {
-  color: #00bbf0;
+  color: #6f42c1;
 }
 
 .heading_container p {
@@ -127,7 +127,7 @@ a:focus {
 
 .sub_page .hero_area {
   min-height: auto;
-  background: linear-gradient(130deg, #231a6f, #0f054c);
+  background: linear-gradient(130deg, #6f42c1,#6f42c1);
 }
 
 .sub_page .hero_area .hero_bg_box {
@@ -168,7 +168,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  color: #00bbf0;
+  color: #6f42c1;
 }
 
 .custom_nav-container .navbar-nav .nav-item.active .nav-link {
@@ -184,7 +184,7 @@ a:focus {
 }
 
 .custom_nav-container .nav_search-btn:hover {
-  color: #00bbf0;
+  color: #6f42c1;
 }
 
 .custom_nav-container .navbar-toggler {
@@ -306,7 +306,7 @@ a:focus {
 .slider_section .detail-box .btn-box .btn1 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #00bbf0;
+  background-color:#6f42c1;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all 0.3s;
@@ -315,7 +315,7 @@ a:focus {
 }
 
 .slider_section .detail-box .btn-box .btn1:hover {
-  background-color: #007fa4;
+  background-color: #6f42c1;
 }
 
 .slider_section .detail-box .btn-box .btn2 {
@@ -395,7 +395,7 @@ a:focus {
 .slider_section .carousel-indicators li.active {
   width: 20px;
   height: 20px;
-  background-color: #00bbf0;
+  background-color: #6f42c1;
 }
 
 .service_section {
@@ -775,7 +775,7 @@ a:focus {
 
 /* client section end */
 .info_section {
-  background-color: #00204a;
+  background-color: #6f42c1;
   color: #ffffff;
   padding: 45px 0 15px 0;
 }
