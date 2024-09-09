@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar with Form and User Card</title>
+    <title>Predict Accident Risk</title>
     <link rel="stylesheet" href="{% static 'css/user.css' %}">
 </head>
 <body>
@@ -24,40 +24,59 @@
     <div class="user-card">
         <h2>User Information</h2>
         <div class="user-info">
-            <p><strong>Name:</strong> {{user.username}}</p>
-            <p><strong>Email:</strong> {{user.email}}</p>
+            <p><strong>Name:</strong> {{ user.username }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
         </div>
     </div>
 
     <!-- Form Section -->
     <div class="form-container">
-        <form action="#" method="post">
-            <!-- Start Location Dropdown -->
+        <form action="{% url 'predict_accident' %}" method="post">
+            {% csrf_token %}
+
+            <!-- Vehicle Type Dropdown -->
             <div class="form-group">
-                <label for="start-location">Start Location:</label>
-                <select id="start-location" name="start-location">
-                    <option value="">Select Start Location</option>
-                    <option value="location1">Location 1</option>
-                    <option value="location2">Location 2</option>
-                    <option value="location3">Location 3</option>
+                <label for="vehicle-type">Vehicle Type:</label>
+                <select id="vehicle_type" name="vehicle_type" required>
+                    <option value="">Select Vehicle Type</option>
+                    <option value="Car">Car</option>
+                    <option value="Bus">Bus</option>
+                    <option value="Bicycle">Bicycle</option>
                 </select>
             </div>
 
-            <!-- End Location Dropdown -->
+            <!-- Place Input -->
             <div class="form-group">
-                <label for="end-location">End Location:</label>
-                <select id="end-location" name="end-location">
-                    <option value="">Select End Location</option>
-                    <option value="location1">Location 1</option>
-                    <option value="location2">Location 2</option>
-                    <option value="location3">Location 3</option>
+                <label for="road_name">Road Type:</label>
+                <select id="road_name_in_googleMap" name="road_name_in_googleMap" required>
+                    <option value="">Select Road Type</option>
+                    <option value="Paud Road">Paud Road</option>
+    
+                </select>
+            </div>
+
+            <!-- Road Type Dropdown -->
+            <div class="form-group">
+                <label for="road_type">Road Type:</label>
+                <select id="road_type" name="road_type" required>
+                    <option value="">Select Road Type</option>
+                    <option value="Highway">Highway</option>
+                    <option value="Rural">Rural</option>
+                    <option value="Main Road">Main Road</option>
                 </select>
             </div>
 
             <!-- Submit Button -->
             <button type="submit" class="submit-btn">Submit</button>
         </form>
-    </div>
 
+        <!-- Prediction Result Section -->
+        <div class="prediction-result-box">
+            {% if probability %}
+                <h3>Predicted Accident Risk:</h3>
+                <p>{{ probability }}</p>
+            {% endif %}
+        </div>
+    </div>
 </body>
 </html>
