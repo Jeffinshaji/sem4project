@@ -13,12 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from schema_graph.views import Schema
 from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Accident.urls')),
+<<<<<<< HEAD
      path('', include('ML_MODAL.urls'))
+=======
+    path('admin_tools_stats/', include('admin_tools_stats.urls')),
+    path("schema/", Schema.as_view()),
+>>>>>>> da6dca83415671791dbd1cf3b9bf63b1f31d19d8
    
    ]
