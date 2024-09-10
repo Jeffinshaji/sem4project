@@ -98,13 +98,30 @@ def predict_accident(request):
 
         # Predict the probability
         probability = rf_model.predict_proba(input_data)[:, 1][0]
-
-        # Render the result back to the template
-        return render(request, 'userdash.html', {
-            'probability': probability,
-            # 'road_name': road_name,
-            # 'vehicle_type': vehicle_type,
-            # 'road_type': road_type
+        risk1="lOW RISK"
+        risk2="HIGH RISK"
+        if probability>0.4:
+             return render(request, 'userdash.html', {
+            'probability': risk1,
+            'road_name': road_name_in_googleMap,
+            'vehicle_type': vehicle_type,
+            'road_type': road_type
         })
+        else:
+            return render(request, 'userdash.html', {
+            'probability': risk2,
+            'road_name': road_name_in_googleMap,
+            'vehicle_type': vehicle_type,
+            'road_type': road_type
+        })
+
+
+        # # Render the result back to the template
+        # return render(request, 'userdash.html', {
+        #     'probability': probability,
+        #     # 'road_name': road_name,
+        #     # 'vehicle_type': vehicle_type,
+        #     # 'road_type': road_type
+        # })
 
     return render(request, 'userdash.html')

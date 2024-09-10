@@ -72,10 +72,22 @@
 
         <!-- Prediction Result Section -->
         <div class="prediction-result-box">
-            {% if probability %}
-                <h3>Predicted Accident Risk:</h3>
-                <p>{{ probability }}</p>
-            {% endif %}
+            {% if road_name %}
+            <h3>Road Name:</h3>
+            <p>{{ road_name }}</p>
+        {% endif %}
+        {% if vehicle_type %}
+        <h3>Vehicle Type:</h3>
+        <p>{{ vehicle_type }}</p>
+    {% endif %}
+    {% if road_type %}
+    <h3>Road Type:</h3>
+    <p>{{ road_type }}</p>
+{% endif %}
+{% if probability %}
+<h3>Predicted Accident Risk:</h3>
+<p>{{ probability }}</p>
+{% endif %}
         </div>
     </div>
 </body>

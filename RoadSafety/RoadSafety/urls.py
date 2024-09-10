@@ -20,11 +20,8 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Accident.urls')),
-<<<<<<< HEAD
-     path('', include('ML_MODAL.urls'))
-=======
+     path('', include('ML_MODAL.urls')),
     path('admin_tools_stats/', include('admin_tools_stats.urls')),
     path("schema/", Schema.as_view()),
->>>>>>> da6dca83415671791dbd1cf3b9bf63b1f31d19d8
    
    ]
